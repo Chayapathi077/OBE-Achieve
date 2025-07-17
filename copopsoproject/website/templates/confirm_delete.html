@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBE-Achieve/Show Records/Delete Program Details</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this program?</h1>
+    <p>NBA Code: {{ program.nba_code }}</p>
+    <p>Department: {{ program.department }}</p>
+    <p>Course Name: {{ program.course_name }}</p>
+
+    <!-- Form to confirm deletion -->
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+
+    <!-- Link to cancel and go back to the display page -->
+    <a href="{% url 'display' %}">Cancel</a>
+</body>
+</html>

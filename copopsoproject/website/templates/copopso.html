@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CO-PO-PSO Mapping Matrix for OBE Achieve.">
+    <meta name="author" content="OBE Achieve">
+    <meta name="keywords" content="CO-PO-PSO, Mapping, OBE, Matrix, Education">
+    <title>OBE-Achieve/CO-PO-PSO Mapping</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #000;
+    background: linear-gradient(120deg, #ffe6f0, #fddde6);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Glassmorphism Navbar */
+header nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-family: cooperplate,papyrus,fantasy;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Button Styles */
+.nav-btn, .cta-btn, .btn-primary, button.btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-btn:hover, .cta-btn:hover, .btn-primary:hover, button.btn-primary:hover{
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hero Section */
+main {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero {
+    max-width: 600px;
+    color: #000;
+}
+
+.hero h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Footer (Glassmorphism Effect) */
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    color: #666;
+}
+
+/* Glassmorphism Table */
+.glass-table, .form-container {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+thead th {
+    background: rgba(255, 255, 255, 0.4);
+    color: #333;
+    font-size: 1.2rem;
+}
+
+tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Input Field Styles */
+input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    transition: box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Caution Box Styling */
+.caution-box {
+    display: none;
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+}
+
+.caution-box::before {
+    content: "⚠️";
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .form-container, .glass-table {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary, button.btn-primary {
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+.typing-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid transparent; /* Initial invisible "cursor" */
+    animation: typing 4s steps(40, end) 1 forwards, blink 0.6s step-end infinite 4s; /* Typing and blinking dot */
+}
+
+.typing-text::after {
+    content: "•"; /* Black dot as the cursor */
+    display: inline-block;
+    font-size: 2rem;
+    color: black;
+    opacity: 1; /* Initially visible dot */
+    animation: blink-dot 0.6s step-end infinite; /* Blinking dot */
+}
+
+/* Keyframes for Typing */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframes for Blinking Effect */
+@keyframes blink-dot {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>OBE</h2>
+                </div>
+                <div class="nav-links">
+                     <button class="nav-btn" onclick="window.location.href='{% url 'home'%}'">Home</button>
+                    <button class="nav-btn" id="submitBtn">Submit</button>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="matrix-container">
+            <!-- The caution box will be shown when the form is incomplete -->
+            <div id="cautionBox" class="caution-box">
+                Please fill out all required fields!
+            </div>
+           <h1 class="typing-text">CO-PO-PSO Mapping</h1>
+
+
+
+
+       
+            <form id="mappingForm" method="POST">
+                {% csrf_token %}
+                <table class="glass-table" aria-label="CO-PO-PSO Table">
+                    <thead>
+                        <tr>
+                            <th>CO/PO & PSO</th>
+                            <th>PO1</th>
+                            <th>PO2</th>
+                            <th>PO3</th>
+                            <th>PO4</th>
+                            <th>PO5</th>
+                            <th>PO6</th>
+                            <th>PO7</th>
+                            <th>PO8</th>
+                            <th>PO9</th>
+                            <th>PO10</th>
+                            <th>PO11</th>
+                            <th>PO12</th>
+                            <th>PSO1</th>
+                            <th>PSO2</th>
+                            <th>PSO3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Loop through COs dynamically if possible, or manually repeat for each CO -->
+                        <tr>
+                            <td>CO1</td>
+                            <td><input type="text" name="CO1_po1" required></td>
+                            <td><input type="text" name="CO1_po2" required></td>
+                            <td><input type="text" name="CO1_po3" required></td>
+                            <td><input type="text" name="CO1_po4" required></td>
+                            <td><input type="text" name="CO1_po5" required></td>
+                            <td><input type="text" name="CO1_po6" required></td>
+                            <td><input type="text" name="CO1_po7" required></td>
+                            <td><input type="text" name="CO1_po8" required></td>
+                            <td><input type="text" name="CO1_po9" required></td>
+                            <td><input type="text" name="CO1_po10" required></td>
+                            <td><input type="text" name="CO1_po11" required></td>
+                            <td><input type="text" name="CO1_po12" required></td>
+                            <td><input type="text" name="CO1_pso1" required></td>
+                            <td><input type="text" name="CO1_pso2" required></td>
+                            <td><input type="text" name="CO1_pso3" required></td>
+                        </tr>
+                        <!-- Repeat for CO2 to CO6 with the same structure -->
+                        <tr>
+                            <td>CO2</td>
+                            <td><input type="text" name="CO2_po1" required></td>
+                            <td><input type="text" name="CO2_po2" required></td>
+                            <td><input type="text" name="CO2_po3" required></td>
+                            <td><input type="text" name="CO2_po4" required></td>
+                            <td><input type="text" name="CO2_po5" required></td>
+                            <td><input type="text" name="CO2_po6" required></td>
+                            <td><input type="text" name="CO2_po7" required></td>
+                            <td><input type="text" name="CO2_po8" required></td>
+                            <td><input type="text" name="CO2_po9" required></td>
+                            <td><input type="text" name="CO2_po10" required></td>
+                            <td><input type="text" name="CO2_po11" required></td>
+                            <td><input type="text" name="CO2_po12" required></td>
+                            <td><input type="text" name="CO2_pso1" required></td>
+                            <td><input type="text" name="CO2_pso2" required></td>
+                            <td><input type="text" name="CO2_pso3" required></td>
+                        </tr>
+                        <!-- Additional rows for CO3 to CO6 -->
+                        <tr>
+                            <td>CO3</td>
+                            <td><input type="text" name="CO3_po1" required></td>
+                            <td><input type="text" name="CO3_po2" required></td>
+                            <td><input type="text" name="CO3_po3" required></td>
+                            <td><input type="text" name="CO3_po4" required></td>
+                            <td><input type="text" name="CO3_po5" required></td>
+                            <td><input type="text" name="CO3_po6" required></td>
+                            <td><input type="text" name="CO3_po7" required></td>
+                            <td><input type="text" name="CO3_po8" required></td>
+                            <td><input type="text" name="CO3_po9" required></td>
+                            <td><input type="text" name="CO3_po10" required></td>
+                            <td><input type="text" name="CO3_po11" required></td>
+                            <td><input type="text" name="CO3_po12" required></td>
+                            <td><input type="text" name="CO3_pso1" required></td>
+                            <td><input type="text" name="CO3_pso2" required></td>
+                            <td><input type="text" name="CO3_pso3" required></td>
+                        </tr>
+                        <tr>
+                            <td>CO4</td>
+                            <td><input type="text" name="CO4_po1" required></td>
+                            <td><input type="text" name="CO4_po2" required></td>
+                            <td><input type="text" name="CO4_po3" required></td>
+                            <td><input type="text" name="CO4_po4" required></td>
+                            <td><input type="text" name="CO4_po5" required></td>
+                            <td><input type="text" name="CO4_po6" required></td>
+                            <td><input type="text" name="CO4_po7" required></td>
+                            <td><input type="text" name="CO4_po8" required></td>
+                            <td><input type="text" name="CO4_po9" required></td>
+                            <td><input type="text" name="CO4_po10" required></td>
+                            <td><input type="text" name="CO4_po11" required></td>
+                            <td><input type="text" name="CO4_po12" required></td>
+                            <td><input type="text" name="CO4_pso1" required></td>
+                            <td><input type="text" name="CO4_pso2" required></td>
+                            <td><input type="text" name="CO4_pso3" required></td>
+                        </tr>
+                        <tr>
+                            <td>CO5</td>
+                            <td><input type="text" name="CO5_po1" required></td>
+                            <td><input type="text" name="CO5_po2" required></td>
+                            <td><input type="text" name="CO5_po3" required></td>
+                            <td><input type="text" name="CO5_po4" required></td>
+                            <td><input type="text" name="CO5_po5" required></td>
+                            <td><input type="text" name="CO5_po6" required></td>
+                            <td><input type="text" name="CO5_po7" required></td>
+                            <td><input type="text" name="CO5_po8" required></td>
+                            <td><input type="text" name="CO5_po9" required></td>
+                            <td><input type="text" name="CO5_po10" required></td>
+                            <td><input type="text" name="CO5_po11" required></td>
+                            <td><input type="text" name="CO5_po12" required></td>
+                            <td><input type="text" name="CO5_pso1" required></td>
+                            <td><input type="text" name="CO5_pso2" required></td>
+                            <td><input type="text" name="CO5_pso3" required></td>
+                        </tr>
+                        <tr>
+                            <td>CO6</td>
+                            <td><input type="text" name="CO6_po1" required></td>
+                            <td><input type="text" name="CO6_po2" required></td>
+                            <td><input type="text" name="CO6_po3" required></td>
+                            <td><input type="text" name="CO6_po4" required></td>
+                            <td><input type="text" name="CO6_po5" required></td>
+                            <td><input type="text" name="CO6_po6" required></td>
+                            <td><input type="text" name="CO6_po7" required></td>
+                            <td><input type="text" name="CO6_po8" required></td>
+                            <td><input type="text" name="CO6_po9" required></td>
+                            <td><input type="text" name="CO6_po10" required></td>
+                            <td><input type="text" name="CO6_po11" required></td>
+                            <td><input type="text" name="CO6_po12" required></td>
+                            <td><input type="text" name="CO6_pso1" required></td>
+                            <td><input type="text" name="CO6_pso2" required></td>
+                            <td><input type="text" name="CO6_pso3" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Hidden submit button will be triggered manually -->
+                <button type="submit" style="display:none;" id="submitFormBtn"></button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 OBE Achieve. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Function to validate if all required cells are filled
+        function validateMatrix() {
+            const cells = document.querySelectorAll('input[type="text"]');
+            let allFilled = true;
+
+            // Check each editable cell to see if it's filled
+            cells.forEach(cell => {
+                if (cell.value.trim() === '') {
+                    allFilled = false;
+                }
+            });
+
+            // Show or hide the caution box based on validation
+            const cautionBox = document.getElementById('cautionBox');
+            if (allFilled) {
+                cautionBox.style.display = 'none'; // Hide caution box if all fields are filled
+            } else {
+                cautionBox.style.display = 'block'; // Show caution box if some fields are empty
+            }
+
+            return allFilled;
+        }
+
+        // Attach event listener to the submit button
+        document.getElementById('submitBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form submission for demo purposes
+            if (validateMatrix()) {
+                document.getElementById('submitFormBtn').click(); // Trigger the hidden submit button if validation passes
+            }
+        });
+    </script>
+</body>
+
+</html>

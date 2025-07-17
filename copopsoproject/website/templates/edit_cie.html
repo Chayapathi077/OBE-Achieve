@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBE-Achieve/Show Records/Edit CIE Data</title>
+</head>
+<body>
+    <h1>Edit CIE Data</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" value="{{ cie_data.question }}" required><br>
+
+        <label for="first_ia">1st IA:</label>
+        <input type="text" id="first_ia" name="first_ia" value="{{ cie_data.first_ia }}" required><br>
+
+        <label for="second_ia">2nd IA:</label>
+        <input type="text" id="second_ia" name="second_ia" value="{{ cie_data.second_ia }}" required><br>
+
+        <label for="third_ia">3rd IA:</label>
+        <input type="text" id="third_ia" name="third_ia" value="{{ cie_data.third_ia }}" required><br>
+
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'display' %}">Cancel</a>
+</body>
+</html>

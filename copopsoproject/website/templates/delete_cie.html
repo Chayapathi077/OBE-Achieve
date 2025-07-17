@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OBE-Achieve/Show Records/Delete CIE Data</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete the following CIE mark?</h1>
+    <p>Question: {{ cie_data.question }}</p>
+    <p>1st IA: {{ cie_data.first_ia }}</p>
+    <p>2nd IA: {{ cie_data.second_ia }}</p>
+    <p>3rd IA: {{ cie_data.third_ia }}</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete</button>
+        <a href="{% url 'display' %}"><button type="button">Cancel</button></a>
+    </form>
+</body>
+</html>

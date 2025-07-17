@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBE-Achieve/Program Details</title>
+    <style>
+   /* General page setup */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the container takes at least the full height */
+    padding-bottom: 50px; /* Space for the footer */
+}
+
+/* Table styling */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Submit button container */
+.submit-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Prevent footer from covering submit button */
+.container {
+    flex-grow: 1; /* Allows the table and button area to take all available space */
+    padding-bottom: 70px; /* Ensures space between button and footer */
+}
+
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #000;
+    background: linear-gradient(120deg, #ffe6f0, #fddde6);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Glassmorphism Navbar */
+header nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-family: cooperplate,papyrus,fantasy;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Button Styles */
+.nav-btn, .cta-btn, .btn-primary, button.btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-btn:hover, .cta-btn:hover, .btn-primary:hover, button.btn-primary:hover{
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hero Section */
+main {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero {
+    max-width: 600px;
+    color: #000;
+}
+
+.hero h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Footer (Glassmorphism Effect) */
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    color: #666;
+}
+
+/* Glassmorphism Table */
+.glass-table, .form-container {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+thead th {
+    background: rgba(255, 255, 255, 0.4);
+    color: #333;
+    font-size: 1.2rem;
+}
+
+tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Input Field Styles */
+input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    transition: box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Caution Box Styling */
+.caution-box {
+    display: none;
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+}
+
+.caution-box::before {
+    content: "⚠️";
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .form-container, .glass-table {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary, button.btn-primary {
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+.typing-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid transparent; /* Initial invisible "cursor" */
+    animation: typing 4s steps(40, end) 1 forwards, blink 0.6s step-end infinite 4s; /* Typing and blinking dot */
+}
+
+.typing-text::after {
+    content: "•"; /* Black dot as the cursor */
+    display: inline-block;
+    font-size: 2rem;
+    color: black;
+    opacity: 1; /* Initially visible dot */
+    animation: blink-dot 0.6s step-end infinite; /* Blinking dot */
+}
+
+/* Keyframes for Typing */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframes for Blinking Effect */
+@keyframes blink-dot {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    </style>
+    </head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>OBE</h2>
+                </div>
+                <div class="nav-links">
+                    <!-- Submit Button placed before the Back Button -->
+                    <button class="nav-btn" onclick="window.location.href='{% url 'home'%}'">Home</button>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="matrix-container">
+            <!-- The caution box will be shown when the form is incomplete -->
+            <div id="cautionBox" class="caution-box">
+                Please fill out all required fields!
+            </div>
+            <h1 class="typing-text">Program Details</h1>
+            
+            <div class="matrix-container">
+    <form method="POST" action="{% url 'program_details' %}" class="program-form">
+    {% csrf_token %}
+   
+        <table class="glass-table">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Input</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="nba-code">NBA Code</label></td>
+                    <td>{{ form.nba_code }}</td>
+                </tr>
+                <tr>
+                    <td><label for="department">Department</label></td>
+                    <td>{{ form.department }}</td>
+                </tr>
+                <tr>
+                    <td><label for="course_name">Course Name</label></td>
+                    <td>{{ form.course_name }}</td>
+                </tr>
+                <tr>
+                    <td><label for="academic_year">Academic Year</label></td>
+                    <td>{{ form.academic_year }}</td>
+                </tr>
+                <tr>
+                    <td><label for="num_students">Number of Students</label></td>
+                    <td>{{ form.num_students }}</td>
+                </tr>
+                <tr>
+                    <td><label for="faculty_name">Faculty Name</label></td>
+                    <td>{{ form.faculty_name }}</td>
+                </tr>
+                <tr>
+                    <td><label for="program_title">Program Title</label></td>
+                    <td>{{ form.program_title }}</td>
+                </tr>
+                <tr>
+                    <td><label for="semester_section">Semester & Section</label></td>
+                    <td>{{ form.semester_section }}</td>
+                </tr>
+                <tr>
+                    <td><label for="max_see_marks">Max SEE Marks</label></td>
+                    <td>{{ form.max_see_marks }}</td>
+                </tr>
+                <tr>
+                    <td><label for="hod_name">HoD Name</label></td>
+                    <td>{{ form.hod_name }}</td>
+                </tr>
+            </tbody>
+        
+    
+
+   
+</table>
+<button type="submit" class="nav-btn">Submit</button>
+            
+       
+</form>
+</div>
+ 
+        </section>
+    </main>
+
+    <!-- Footer with class footer1 -->
+    
+  
+    <!-- JavaScript for Caution Message -->
+    <script>
+        // Function to validate if all required fields are filled
+        function validateForm() {
+            const form = document.getElementById('programForm');
+            const inputs = form.querySelectorAll('input[required]');
+            let allFilled = true;
+
+            // Loop through all inputs and check if they are filled
+            inputs.forEach(input => {
+                if (input.value.trim() === '') {
+                    allFilled = false; // If any required field is empty, set allFilled to false
+                }
+            });
+
+            // Show or hide the caution box based on validation
+            const cautionBox = document.getElementById('cautionBox');
+            if (allFilled) {
+                cautionBox.style.display = 'none'; // Hide caution box if all fields are filled
+            } else {
+                cautionBox.style.display = 'block'; // Show caution box if some fields are empty
+            }
+        }
+
+        // Attach event listener to the submit button
+        document.getElementById('submitBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form submission for demo purposes
+            validateForm(); // Validate and show/hide caution box
+        });
+    </script>
+</body>
+
+</html>
+
+
+   
