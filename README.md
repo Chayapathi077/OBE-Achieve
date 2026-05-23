@@ -1,4 +1,4 @@
-# 📊 CO-PO-PSO Calculation App
+# 📊 OBE Achieve - A CO-PO-PSO Calculation App
 
 A full-stack web application designed to automate the calculation, mapping, and tracking of Course Outcomes (CO), Program Outcomes (PO), and Program Specific Outcomes (PSO). Built with Django, this tool streamlines the Outcome-Based Education (OBE) workflow, making it easier for faculty and academic departments to evaluate curriculum attainment.
 
